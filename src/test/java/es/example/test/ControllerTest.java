@@ -54,7 +54,7 @@ public class ControllerTest {
 		
 		String brandId = "1";
 		String productId = "35455";
-		LocalDateTime dateTime = LocalDateTime.parse("2020-06-14T01:30:55.000-05:00");
+		LocalDateTime dateTime = LocalDateTime.parse("2020-06-14T10:00:00");
 		
 		List<Price> priceList = new ArrayList<>();
 		
