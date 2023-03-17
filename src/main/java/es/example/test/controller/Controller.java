@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import es.example.test.entity.DataDto;
 import es.example.test.service.TestServiceImp;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+/*import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;*/
 
 @RestController
 @RequestMapping("/test")
@@ -25,13 +25,13 @@ public class Controller {
 	@ResponseBody
 	@GetMapping(value = "/getPrices")
 	public DataDto cancelSubscription(
-			final HttpServletRequest request,
+			/*final HttpServletRequest request,*/
 //			@RequestParam(value = "date", required = true) String date,
 			@RequestParam("dateTime") 
 			@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dateTime,
 			@RequestParam(value = "product_id", required = true) String productId,
-			@RequestParam(value = "brand_id", required = true) String brandId,
-			final HttpServletResponse response) {
+			@RequestParam(value = "brand_id", required = true) String brandId
+			/*final HttpServletResponse response*/) {
 		
 		System.out.println("Start app");
 		

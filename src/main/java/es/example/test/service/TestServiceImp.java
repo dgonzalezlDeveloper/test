@@ -38,7 +38,7 @@ public class TestServiceImp implements TestService {
 //				.filter(x -> x.getEndDate().isAfter(dateTime) && x.getStartDate().isBefore(dateTime))
 //				.sorted(Comparator.comparingInt(Price::getPriority).reversed()).findFirst().orElseThrow());
 		
-		if(price.isEmpty()) {
+		if(!price.isPresent()) {
 			throw new RequestException("P-500", "No filter");
 		}
 		return price.get();
